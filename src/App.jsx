@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import NavBar from "./pages/NavBar";
+import Inbox from "./pages/Inbox";
+import Schedule from "./pages/Schedule";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <>
-      <h1>Finals Scheduler</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<NavBar />}>
+            <Route index element={<Home />} />
+            <Route path="inbox" element={<Inbox />} />
+            <Route path="schedule" element={<Schedule />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
-
-export default App;
