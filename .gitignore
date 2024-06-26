@@ -25,3 +25,6 @@ dist-ssr
 
 # Ignore .env files (for sensitive data)
 .env
+
+# SQL queries
+*.sql

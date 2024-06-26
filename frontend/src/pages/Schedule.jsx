@@ -1,6 +1,14 @@
+class final {
+  constructor(ClassStart, ExamDay, ExamDate, ExamTime) {
+    this.ClassStart = ClassStart;
+    this.ExamDay = ExamDay;
+    this.ExamDate = ExamDate;
+    this.ExamTime = ExamTime;
+  }
+}
+
 const Schedule = () => {
 
-  
   return (
     <>
       <h1>Schedule</h1>
