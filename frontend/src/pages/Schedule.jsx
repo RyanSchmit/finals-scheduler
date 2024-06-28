@@ -13,8 +13,8 @@ const Schedule = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/getSchedule")
-      .then((response) => response.json())
+    fetch("http://localhost:8080/api/getSchedule")
+      .then((res) => res.json())
       .then((json) => setData(json))
       .catch((error) => console.error(error));
   }, []);
